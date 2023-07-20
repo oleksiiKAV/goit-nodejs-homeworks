@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "6cd806e4-ca05-404f-88a9-ca504b6c181e",
+		"name": "HW02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25036737"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/contacts/AeHIrLTr6JkxGE6SN-0Rw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts",
+						"AeHIrLTr6JkxGE6SN-0Rw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Allen Raymond12212\",\r\n            \"email\": \"nulla.ante@vestibul.co.uk\",\r\n            \"phone\": \"(992) 914-3792\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/contacts/f44b2609-26de-4de0-b9b2-7e1074a4ff2d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts",
+						"f44b2609-26de-4de0-b9b2-7e1074a4ff2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n            \"name\": \"Allensss Raymond551215\",\r\n            \"email\": \"222@vestibul.co.uk\",\r\n            \"phone\": \"(222) 914-3782\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/contacts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/contacts/AeHIrLTr6JkxGE6SN-0Rw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts",
+						"AeHIrLTr6JkxGE6SN-0Rw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
