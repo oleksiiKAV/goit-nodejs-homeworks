@@ -3,6 +3,7 @@ const dotenv = require("dotenv")
 
 dotenv.config()
 
+
 const app = require('./app')
 
 const {DB_HOST, PORT = 3000} = process.env;
