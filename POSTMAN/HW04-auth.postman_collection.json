@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "f751fd07-291d-4783-bcf5-0b90895af2be",
+		"name": "HW04-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25036737"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"new_user5@example.com\",\r\n  \"password\": \"new_user5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"example@example.com\",\r\n  \"password\": \"examplepassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2QwYzEyN2M5OWY1ZjFjZTllMTA2MiIsImlhdCI6MTY5MTE2MTg2NywiZXhwIjoxNjkxMjQ4MjY3fQ.CpWLwGv-D2imUcPxuKO3FJ4pMVyk8oOdpcCMndTux5Q"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/api/users/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2QwYjNjN2M5OWY1ZjFjZTllMTA1ZSIsImlhdCI6MTY5MTE2MjY0MiwiZXhwIjoxNjkxMjQ5MDQyfQ.iZ9QdkIbW8pWqvHi9UJhJ5rko1Fup7ALcFWeEqJhe-s"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/users/current"
+			},
+			"response": []
+		},
+		{
+			"name": "Update subscription",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add contact",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2QwYjNjN2M5OWY1ZjFjZTllMTA1ZSIsImlhdCI6MTY5MTE2MzM5NiwiZXhwIjoxNjkxMjQ5Nzk2fQ.RDAlK_sxYrzCPut7glYQXt2lBBNFJPrrLAyUYP4o7yA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"1212Alle1212nsss 121212Raymond551215\",\r\n            \"email\": \"7777@vestibul.co.uk\",\r\n            \"phone\": \"(555) 914-3782\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "Get pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2QwYjNjN2M5OWY1ZjFjZTllMTA1ZSIsImlhdCI6MTY5MTE2MzM5NiwiZXhwIjoxNjkxMjQ5Nzk2fQ.RDAlK_sxYrzCPut7glYQXt2lBBNFJPrrLAyUYP4o7yA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/contacts?page=1&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2QwYjNjN2M5OWY1ZjFjZTllMTA1ZSIsImlhdCI6MTY5MTE2MzM5NiwiZXhwIjoxNjkxMjQ5Nzk2fQ.RDAlK_sxYrzCPut7glYQXt2lBBNFJPrrLAyUYP4o7yA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/contacts?favorite=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "favorite",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
