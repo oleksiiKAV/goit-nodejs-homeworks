@@ -32,7 +32,7 @@ const validation = {
     }),
 
     loginSchema: Joi.object ({
-        email: Joi.string().pattern(EMAIL_REGEXP).required(),
+        email: Joi.string().pattern(EMAIL_REGEXP, {name: "invalid email"}).required(),
         password: Joi.string().min(6).required(),
     }),
 
