@@ -7,9 +7,11 @@
     "start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
     "test": "jest",
     "lint": "eslint **/*.js",
-    "lint:fix": "eslint --fix **/*.js"
+    "lint:fix": "eslint --fix **/*.js",
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium --reporter=html"
   },
   "dependencies": {
+    "@playwright/test": "^1.36.2",
     "bcrypt": "^5.1.0",
     "cors": "2.8.5",
     "cross-env": "7.0.3",
@@ -26,8 +28,8 @@
     "yargs": "^17.7.0"
   },
   "engines": {
-      "node": ">=14.20.1"
-    },
+    "node": ">=14.20.1"
+  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
