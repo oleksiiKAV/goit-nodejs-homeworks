@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const request = require('supertest');
 const app = require('../app');
+require("dotenv").config();
 
+const {DB_HOST} = process.env;
 
 /* Response must have status code 200 +
 The token must be returned in the response +
@@ -16,7 +18,7 @@ describe('login', () => {
       }
 
     beforeAll(() => {
-        const DB_HOST = "mongodb+srv://oleksiikav:Passw0rd@kavcluster0.gy6eejb.mongodb.net/db-contacts?retryWrites=true&w=majority";
+        
         mongoose.set("strictQuery", true);
 
         mongoose.connect(DB_HOST)
