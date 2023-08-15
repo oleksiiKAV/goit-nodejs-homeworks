@@ -11,6 +11,7 @@
     "tests:api": "playwright test --config=api.config.ts --project=Chromium --reporter=html"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "@playwright/test": "^1.36.2",
     "bcrypt": "^5.1.0",
     "cors": "2.8.5",
